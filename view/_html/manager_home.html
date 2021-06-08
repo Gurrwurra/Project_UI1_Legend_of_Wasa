@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../_css/manager.css">
+    <link rel="stylesheet" type="text/css" href="../_css/commonalities.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../model/Dictionary.js"></script>
+    <script type="text/javascript" src="../../model/DBLoaded.js"></script>
+    <script type="text/javascript" src="../../model/Beverages.js"></script>
+    <script type="text/javascript" src="../../model/Loader.js"></script>
+    <script type="text/javascript" src="../../model/Un-RedoManager.js"></script>
+    <script type="text/javascript" src="../../controller/manager.js"></script>
+    <script type="text/javascript" src="../../controller/helperFunctions.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Manager homepage</title>
+</head>
+<body>
+
+<!--- Shows a navigation bar at the top of the page linking to: Logo, Menu, Language switch, Login --->
+<div class="topnav">
+    <ul>
+        <li><a href="index.html">The Flying Dutchman</a></li>
+        <li style="float:right">
+            <a class="btn" href="index.html" id="log_in_area">
+                <div id="log_out_txt"></div>
+            </a></li>
+        <li style="float:right">
+            <div class="btn" id="language_cha" onclick="change_lang()"> <!--- when clicking within this area function: change_lang starts---->
+                <img id="lang_pic" src="">
+                <div id="lang_txt"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<!-- Welcome message-->
+<div id="welcome_login_section">
+    <h1 id="welcome_title"> <h1 id="welcome_userName"></h1></h1>
+</div>
+
+<div id="manager_content">
+
+    <!-- Html area for the stock for each beverage-->
+<div id="beverage_stock_section">
+    <h2 id="beverage_stock_title"></h2>
+    <ol id="beverage_stock_list">
+
+    </ol>
+</div>
+
+    <!-- Html area for the manager to remove an beverage temporarily from the menu-->
+<div id="remove_item_section">
+    <h2 id="remove_item_title"></h2>
+    <input type="text" id="art_id_remove">
+    <label id="lbl_remove_item"></label>
+    <div id="remove_item_btn" class="btn" onclick="removeTemporarilyItem()"></div>
+    <div id="un-redo-area">
+    <button class="btn" id="undo" onclick="undo()"></button>
+    <button class="btn" id="redo" onclick="redo()"></button>
+    </div>
+</div>
+
+    <!-- Html area for displaying removed beverages-->
+<div id="removed_beverages_section">
+    <h2 id="removed_bev_list_title"></h2>
+    <ol id="removed_bev_list">
+
+    </ol>
+</div>
+</div>
+</body>
+</html>

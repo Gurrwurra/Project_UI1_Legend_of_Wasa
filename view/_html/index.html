@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home page</title>
+
+    <link rel="stylesheet" type="text/css" href="../_css/index.css">
+    <link rel="stylesheet" type="text/css" href="../_css/commonalities.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../model/Dictionary.js"></script>
+    <script type="text/javascript" src="../../model/Loader.js"></script>
+    <script type="text/javascript" src="../../model/Beverages.js"></script>
+    <script type="text/javascript" src="../../controller/index.js"></script>
+    <script type="text/javascript" src="../../controller/helperFunctions.js"></script>
+    <script type="text/javascript" src="../../controller/order.js"></script>
+    <script type="text/javascript" src="../../controller/stock.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<!--- Shows a navigation bar at the top of the page linking to: Logo, Menu, Language switch, Login --->
+<!---navbar goes here later--->
+<div class="topnav">
+    <div id="topnav>
+    <ul>
+        <li><a href="">The Flying Dutchman</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li style="float:right">
+            <a class="btn" href="log_in.html" id="log_in_area">
+                <div id="log_in_txt"></div>
+            </a></li>
+        <li style="float:right">
+            <div class="btn" id="language_cha" onclick="change_lang()"> <!--- when clicking within this area function: change_lang starts---->
+                <img id="lang_pic" src="">
+                <div id="lang_txt"></div>
+            </div>
+        </li>
+    </ul>
+    </div>
+</div>
+<!-- Header Area-->
+<div id="header">
+    <div id="welcome_sec">
+        <h1 id="welcome_txt"></h1>
+    </div>
+</div>
+
+<div class="columns">
+
+    <div class="column1of2">
+        <!-- Menu Area -->
+        <div id="column_left">
+            <div id="menu">
+                <h2 id="beer_menu_title"></h2>
+                <div id="undo_redo"></div>
+                <input type="text" id="search_input" placeholder="Search for beer name">
+                <button class="search_btn" onclick="searchProduct()">search</button>
+                <div id="box">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column2of2">
+            <div id="car" class="car">
+                <h1 id="cart_area"></h1>
+                <div class="head_row hid">
+                    <div class="check left"> <i onclick="checkAll()">√</i></div>
+                    <div class="left">Select All To Pay</div>
+                    <div class="name left"><!--Name--></div>
+                    <div class="price left"><!--Price--></div>
+                    <div class="number left"><!--Amount--></div>
+                    <div class="subtotal left"><!--Subtotal--></div>
+                    <div class="ctrl left"><!--Remove--></div>
+                </div>
+            </div>
+
+            <!-- Sum Area-->
+            <div id="sum_area">
+                <div id="pay">Order All</div>
+                <div id="pay_amount">Total: <span id="price_num">0</span>kr</div>
+            </div>
+    </div>
+
+</div>
+
+<!-- Return to top button -->
+<button onclick="topFunction()" id="toTop" title="toTop">To Top</button>
+
+
+</body>
+</html>

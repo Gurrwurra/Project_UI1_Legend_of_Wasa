@@ -1,0 +1,214 @@
+/********************* Body *********************/
+
+body{
+    background-color: #344350;
+    color: #EBEBE7;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/********************* Top navigation *********************/
+
+.topnav {
+    overflow: hidden;
+    font-family: 'Astloch', cursive;
+    font-weight: bold;
+}
+
+.topnav a:hover {
+    color: #A0C0D5;
+}
+
+.topnav a {
+    float: left;
+    color: #344350;
+    text-align: center;
+    padding: 26px 40px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #EBEBE7;
+}
+
+li a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#language_cha {
+    background: #EBEBE7;
+}
+
+#log_in_area {
+    background: #EBEBE7;
+}
+
+/********************* Welcome text *********************/
+
+#welcome_title{
+    font-family: 'Astloch', cursive;
+    font-weight: 400;
+    font-size: xxx-large;
+}
+
+
+/***********************Manager content layout*****************************/
+
+#manager_content{
+    display: grid;
+    grid-template-areas: "beverage_stock remove_item"
+                         "beverage_stock removed_beverages"
+                         "beverage_stock nothing";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25%
+                        25%;
+}
+
+#beverage_stock_section{
+    text-align: center;
+    margin: auto;
+    grid-area: beverage_stock;
+}
+
+#remove_item_section{
+    margin: auto;
+    text-align: center;
+    grid-area: remove_item;
+}
+
+#removed_beverages_section{
+    margin: auto;
+    text-align: center;
+    grid-area: removed_beverages;
+}
+
+/***********************Manager stock list*****************************/
+
+.beverage_line{
+    margin: 10px auto;
+    border-bottom: white 1px solid;
+    padding: 10px;
+    display: grid;
+    text-align: center;
+    grid-template-areas: "articleId name stock";
+    grid-template-columns: 33% 33% 33%;
+}
+
+p.bev_id{
+    margin: auto;
+    grid-area: articleId;
+}
+
+p.bev_name{
+    margin: auto;
+    grid-area: name;
+}
+
+p.bev_amount{
+    margin: auto;
+    grid_area: name;
+}
+
+/*************************Remove beverage area*****************************/
+#remove_item_section{
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    display: grid;
+    padding: 20px;
+    grid-template-areas: "header"
+                         "label"
+                         "input"
+                         "button"
+                         "undo-redo-area";
+}
+
+#remove_item_title{
+    grid-area: header;
+}
+
+#lbl_remove_item{
+    margin: 10px;
+    grid-area: label;
+}
+
+#art_id_remove {
+    border: #344350 solid 4px;
+    height: 40px;
+    border-radius: 5px;
+    background: #EBEBE7;
+    grid-area: input;
+}
+
+#remove_item_btn{
+    margin: 20px auto;
+    display: inline-block;
+    grid-area: button;
+}
+
+input:focus{
+    border: #A0C0D5 solid 4px;
+    background: #EBEBE7;
+}
+
+#un-redo-area{
+    grid-area: undo-redo-area;
+    display: grid;
+    grid-template-areas: "undo-btn redo-btn";
+    grid-template-columns: 50% 50%;
+}
+
+#undo{
+    display: inline-block;
+    grid-area: undo-btn;
+}
+
+#redo{
+    display: inline-block;
+    grid-area: redo-btn;
+}
+
+/************************ Removed beverages list***************************/
+
+#removed_bev_list_title{
+    margin-top: 10px;
+}
+
+#removed_bev_list{
+    margin: 10px auto;
+}
+
+.removed_beverage_line{
+    margin: 10px auto;
+    border: white 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    text-align: center;
+    grid-template-areas: "re_articleId re_name re_button";
+    grid-template-columns: 33% 33% 33%;
+}
+
+p.removed_bev_id{
+    margin: auto;
+    grid-area: re_articleId;
+}
+
+p.removed_bev_name{
+    margin: auto;
+    grid-area: re_name;
+}
+
+I.btn {
+    margin: auto;
+    grid-area: re_button;
+}

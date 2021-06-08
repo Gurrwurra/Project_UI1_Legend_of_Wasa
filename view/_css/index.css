@@ -1,0 +1,418 @@
+/********************* Body *********************/
+
+body{
+    background-color: #344350;
+    color: #EBEBE7;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.column1of2 {
+    float: left;
+    width: 60%;
+    margin: 10px;
+}
+
+.column2of2 {
+    /*float: right;*/
+    position: fixed;
+    top: 20%;
+    left: 60%;
+    width: 30%;
+    margin: 10px;
+}
+
+.columns{
+    align: center;
+}
+
+/********************* Top navigation *********************/
+
+.topnav {
+    overflow: hidden;
+    font-family: 'Astloch', cursive;
+    font-weight: bold;
+    background-color: #EBEBE7;
+}
+
+.topnav a:hover {
+    color: #A0C0D5;
+}
+
+.topnav a {
+    float: left;
+    color: #344350;
+    text-align: center;
+    padding: 26px 40px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#topnav ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #EBEBE7;
+}
+
+#topnav li a {
+    float: left;
+    display: block;
+    color: #EBEBE7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#language_cha {
+    background: #EBEBE7;
+}
+
+#log_in_area {
+    background: #EBEBE7;
+}
+
+/********************* Welcome *********************/
+
+#welcome_sec{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#welcome_txt{
+    font-family: 'Astloch', cursive;
+    font-weight: 400;
+    font-size: xxx-large;
+}
+
+/* return to top button */
+#toTop{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: #EBEBE7;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/********************* Cart Area *********************/
+
+.car {
+    /*width: 1240px;*/
+    margin: 20px auto;
+    /*background: #FFF;*/
+    border: 3px dotted;
+    overflow: auto;
+    height: 40rem;
+}
+
+#cart_area{
+    font-family: 'Astloch', cursive;
+    font-weight: 400;
+    font-size: xx-large;
+    text-align: center;
+}
+
+/***** Top Row in Cart Area *****/
+
+.car .check{
+    width: 50px;
+}
+.car .check i{
+    /*color: #fff;*/
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #e0e0e0;
+    margin-left: 24px;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+    font-family: "iconfont";
+}
+
+.i_acity {
+    border-color: #A0C0D5 !important;
+    background-color: #A0C0D5 !important;
+}
+
+.car .name {
+    /*width: 300px;*/
+}
+
+.car .name span {
+    /*line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;*/
+}
+.car .price {
+   /* width: 144px;
+    text-align: right;
+    padding-right: 84px;*/
+}
+
+.car .price span {
+    /*color: #A0C0D5;
+    font-size: 16px;*/
+}
+.car .number{
+    /*width: 150px;*/
+}
+.car .subtotal{
+    /*width: 130px;*/
+
+}
+.car .ctrl {
+    /*width: 105px;
+    padding-right:25px;
+    text-align: center;*/
+}
+.car .ctrl a {
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    /*width: 26px;
+    height: 26px;*/
+    margin: 30px auto;
+    line-height: 26px;
+}
+.car .ctrl a:hover {
+    color: #EBEBE7;
+    background: #A0C0D5;
+    border-radius: 50%;
+}
+.head_row {
+    height: 70px;
+    line-height: 70px;
+}
+/*.head_row, .row {
+    border-bottom: solid 1px #e0e0e0;
+}*/
+.row {
+    height: 86px;
+    /*line-height: 86px;*/
+    padding: 15px 0;
+    margin: 0px;
+}
+
+/***** Order Summation *****/
+
+#sum_area{
+    /*width:1240px;*/
+    height: 60px;
+    background: #EBEBE7;
+    font-size: medium;
+    /*margin: 20px auto;*/
+}
+#sum_area #pay{
+    width:250px;
+    height:60px;
+    text-align: center;
+    float: right;
+    line-height: 60px;
+    background: #A0C0D5;
+    color: #EBEBE7;
+}
+#sum_area #pay_amount{
+    width:250px;
+    height:60px;
+    text-align: center;
+    float: right;
+    line-height: 60px;
+    color:#A0C0D5 ;
+}
+#sum_area #pay_amount #price_num{
+    width:100px;
+    height: 60px;
+    font-size: 25px;
+    color:#A0C0D5 ;
+    /*  float: left;*/
+}
+
+.item_count_i{
+    height: 85px;
+    width:10%;
+    /*border: 1px solid black;*/
+    float: left;
+    margin-right: 25px;
+}
+.num_count{
+    width:150px;
+    height:40px;
+    border: 1.2px solid #EBEBE7;
+    float:right;
+    margin-top: 21px;
+
+}
+.count_i{
+    width:30%;
+    height:40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size:21px;
+    color: #747474;
+}
+.count_i:hover{
+    width:30%;
+    height:40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size:21px;
+    color: #747474;
+    background: #EBEBE7;
+    cursor: pointer;
+}
+.c_num{
+    width:40%;
+    height:40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size:16px;
+    color: #747474;
+}
+.count_d{
+    width:30%;
+    height:40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size:25px;
+    color: #747474;
+}
+.count_d:hover{
+    width:30%;
+    height:40px;
+    line-height: 40px;
+    float: left;
+    text-align: center;
+    font-size:25px;
+    color: #747474;
+    background: #E0E0E0;
+    cursor: pointer;
+}
+.i_acity2 {
+    border-color: #A0C0D5 !important;
+    background-color: #A0C0D5 !important;
+}
+
+/********************* Beer Menu *********************/
+
+#menu{
+    text-align: center;
+    border: #EBEBE7 double 5px;
+    margin: 10%;
+    padding: 10px;
+    overflow: auto;
+}
+
+#beer_menu_title{
+    font-family: 'Astloch', cursive;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+.hid {
+    overflow: hidden;
+}
+.left {
+    float: left;
+}
+
+#add_btn{
+    display: grid;
+    grid-area: btn;
+}
+
+#box {
+    align-content: center;
+    display: grid;
+    grid-area: name;
+    height: 60rem;
+}
+
+#box ul {
+    list-style:none;
+    align-content: center;
+    margin:0; 
+    padding:0; 
+    overflow: auto;
+}
+
+#box li {
+    /*align-content: space-evenly;*/
+    border: #EBEBE7 dotted 2px;
+    background-color: #A0C0D5;
+    color: #344350;
+    border-radius: 5px;
+    display: grid;
+    grid-template-areas: "name producer strength price btn";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+/* responsive design for index page */
+@media screen and (max-width : 1024px) and (max-height: 768px){
+    .car{
+        height: 25rem;
+        width: 30rem;
+    }
+    .column2of2{
+        height: 50%;
+    }
+    /* a symbol shows that it works */
+    #log_in_area {
+        background: red;
+    }
+    #sum_area{
+        width: 30rem;
+        height: 5rem;
+        background: #EBEBE7;
+        font-size: medium;
+    }
+    #sum_area #pay{
+        width: 20rem;
+        height: 100%;
+        text-align: center;
+        float: right;
+        line-height: 60px;
+        background: #A0C0D5;
+        color: #EBEBE7;
+    }
+}
+
+/* search bar */
+#search_input {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 20rem;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Waiter homepage</title>
+
+    <link rel="stylesheet" type="text/css" href="../_css/waiter.css">
+    <link rel="stylesheet" type="text/css" href="../_css/commonalities.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../model/Dictionary.js"></script>
+    <script type="text/javascript" src="../../model/DBLoaded.js"></script>
+    <script type="text/javascript" src="../../model/Loader.js"></script>
+    <script type="text/javascript" src="../../controller/waiter.js"></script>
+    <script type="text/javascript" src="../../model/Beverages.js"></script>
+    <script type="text/javascript" src="../../controller/helperFunctions.js"></script>
+    <script type="text/javascript" src="../../controller/order.js"></script>
+    <script type="text/javascript" src="../../controller/stock.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="topnav">
+    <ul>
+        <li><a href="index.html">The Flying Dutchman</a></li>
+        <li style="float:right">
+            <a class="btn" href="index.html" id="log_in_area">
+                <div id="log_out_txt"></div>
+            </a></li>
+        <li style="float:right">
+            <div class="btn" id="language_cha" onclick="change_lang()"> <!--- when clicking within this area function: change_lang starts---->
+                <img id="lang_pic" src="">
+                <div id="lang_txt"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<!-- Sidebar Menu -->
+<div id="menu" class="menu">
+    <div class="container">
+    <nav class="main-nav" role="navigation">
+        <ul class="main-menu">
+        <li><a id="bart_side_menu_home" href="#section1"></a></li>
+        <li><a id="bart_side_menu_orders" href="#section2"></a></li>
+        <li><a id="bart_side_menu_stock" href="#section3"></a></li>
+        <li><a id="bart_side_menu_security" onclick="alertSecurity()"></a></li>
+        </ul>
+    </nav>
+    </div>
+</div>
+
+
+<!-- welcoming title, the name of the user and the VIP users salary -->
+<section class="section" id=section1 data-section="section1">
+    <div class="container">
+        <div id="welcome_login_section">
+
+            <div id="welcome_userName"></div>
+
+            <form name="basic_order"> 
+                <div id="select_table1"></div>
+                <div class="order_list" id="home_list">
+                    <ul></ul>
+                </div>   
+            </form>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id=section2 data-section="section2">
+    <div class="container">
+
+        <!--mask layer-->
+        <div class="mask_div">
+            <div class="table_order_page">
+                <span class="close_btn">X</span>
+                <div class="table_order_header"></div>
+                <div class="table_order_menu"></div>
+            </div>
+        </div>
+
+        <!-- The first accordion button -->
+        <div id="order_manag_title" class="accordion"></div>
+        <div id="table_area">
+            <div class="tip_name"></div>
+            <div id="grid_container" class="grid_container"></div>
+        </div>
+
+        <!-- The second accordion button -->
+        <div id="alter_price_title" class="accordion"></div>
+        <div class="panel">
+            <p>Insert new codes here...</p>
+        </div>
+
+        <!-- The third accordion button -->
+        <div id="on_the_house_title" class="accordion"></div>
+        <div class="panel2">
+            
+            <form name="on_the_house"> 
+                <div id="change_house">
+
+                    <div id="select_table"></div>
+                    
+                    <table>
+                        <tr>
+                            <td><b>ID:</b><input type=text name=id></td>
+                            <td><b>Amount(on the house):</b><input type=text name=amount></td>
+                            <td><input id=house_submit type=button value="Submit" onclick="onHouse()"> </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                
+                <p></p>
+            
+                <!-- order list -->
+                <div class="order_list" id="house_list">
+                    <ul></ul>
+                </div>                
+            
+            </form>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="section" id=section3 data-section="section3">
+    <div class="container">  
+
+        <!-- The first accordion button -->
+        <div id="stock_manag_title" class="accordion"></div>
+        <div class="panel2">
+            <div id="stock_sec">
+                <form name="current_stock"> 
+                    <div id="change_stock">
+                        <table>
+                            <tr>
+                                <td><b>ID:</b><input type=text name=id></td>
+                                <td><b>Amount:</b><input type=text name=amount></td>
+                            </tr>
+                            <tr>
+                                <td><input type=button value="Update" onclick="modifyStocks()"> </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <p></p>
+            
+                    <table id="stock_tab"></table>
+            
+                </form>
+            </div>   
+        </div>
+        
+        <!-- The second accordion button -->
+        <div id="remove_item_title" class="accordion"></div>
+        <div class="panel">
+            <p>Insert new codes here...</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Return to top button -->
+<button onclick="topFunction()" id="toTop" title="toTop">To Top</button>
+
+
+</body>    
+</html>
